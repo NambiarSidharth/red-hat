@@ -156,7 +156,7 @@ def update_priority(feedback):
 # feedback=["Doubtful",-0.6,1]
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 def create_output_page(arr, score):
@@ -214,4 +214,4 @@ def changepriority():
     #call your function here sid
     return render_template('index.html')
 if __name__=="__main__":
-    app.run()
+    application.run()
