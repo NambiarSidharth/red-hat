@@ -177,11 +177,11 @@ def create_output_page(arr, score):
     hs.write(strTable)
     hs.close()
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/getdata',methods=['POST'])
+@application.route('/getdata',methods=['POST'])
 def getdata():
     text1 = request.form['data']
     #text2 = request.form['text2']
@@ -195,7 +195,7 @@ def getdata():
 
     return render_template('HTMLTable.html')
 
-@app.route('/changepriority',methods=['POST'])
+@application.route('/changepriority',methods=['POST'])
 def changepriority():
     priority=request.form['priority']
     helpful=request.form['helpful']
